@@ -184,18 +184,14 @@ struct LinkedList
         cout << "[";
         while (curr_item->next)
         {
-            if (curr_item == this->head)
-            {
-                cout << curr_item->data;
-            }
-            else
-            {
-                cout << ", " << curr_item->data;
-            }
+            cout << curr_item->data << ", ";
             curr_item = curr_item->next;
         }
+        cout << curr_item->data;
         cout << "]" << endl;
         return;
+
+      
     }
     void traverse_vert()
     {

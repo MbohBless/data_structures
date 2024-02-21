@@ -1,6 +1,7 @@
 #include <iostream>
 #include "LinkedList.hpp"
 #include "CustomStack.hpp"
+#include "Queue.hpp"
 
 
 void linkedListOperations(){
@@ -38,6 +39,23 @@ void stackOperations(){
     stack.traverse();
 }
 
+void queueOperations(){
+    CustomQueue<int> queue;
+    queue.enqueue(2);
+    queue.enqueue(3);
+    queue.enqueue(4);
+    queue.enqueue(5);
+    queue.enqueue(6);
+    queue.traverse();
+    queue.dequeue();
+    queue.traverse();
+    cout << "Front of queue: " << queue.peek() << endl;
+    cout << "Size of queue: " << queue.size() << endl;
+    printf("Is queue empty: %d\n", queue.isEmpty()==1?true:false);
+    queue.clear();
+    queue.traverse();
+}
+
 int main()
 {
    cout << "Linked List Operations" << endl;
@@ -47,6 +65,11 @@ int main()
     cout << "Stack Operations" << endl;
     cout << "----------------------" << endl;
     stackOperations();
+    cout<<"______________________"<<endl;
+
+    cout << "Queue Operations" << endl;
+    cout << "----------------------" << endl;
+    queueOperations();
 
     return 0;
     
